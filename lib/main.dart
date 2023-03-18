@@ -18,18 +18,17 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  bool darkMode = false;
-  
-
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool darkMode = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade300,
+      backgroundColor: darkMode ? Colors.grey.shade800 : Colors.grey.shade300,
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -40,19 +39,19 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Icon(
               Icons.android_rounded,
               size: 80,
-              color: Colors.black,
+              color:darkMode ? Colors.white : Colors.black,
             ),
             decoration: BoxDecoration(
-                color: Colors.grey.shade300,
+                color: darkMode ? Colors.grey.shade800 : Colors.grey.shade300,
                 borderRadius: BorderRadius.all(Radius.circular(50)),
                 boxShadow: [
                   BoxShadow(
-                      color: Colors.grey.shade500,
+                      color:darkMode ? Colors.grey.shade900 : Colors.grey.shade500,
                       offset: Offset(4.0, 4.0),
                       blurRadius: 15.0,
                       spreadRadius: 1.0),
                   BoxShadow(
-                      color: Colors.grey.shade500,
+                      color:darkMode ? Colors.grey.shade800 : Colors.white,
                       offset: Offset(-4.0, -4.0),
                       blurRadius: 15.0,
                       spreadRadius: 1.0),
@@ -66,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   TextButton(
                       onPressed: () {
                         setState(() {
-                          //darkMode = true;
+                          darkMode = true;
                         });
                       },
                       child: Text(
@@ -76,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   TextButton(
                       onPressed: () {
                         setState(() {
-                          //darkMode = false;
+                          darkMode = false;
                         });
                       },
                       child: Text(
