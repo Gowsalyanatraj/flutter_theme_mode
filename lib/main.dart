@@ -37,21 +37,23 @@ class _MyHomePageState extends State<MyHomePage> {
             width: 200,
             height: 200,
             child: Icon(
-              Icons.android_rounded,
+              Icons.mode_night,
               size: 80,
-              color:darkMode ? Colors.white : Colors.black,
+              color: darkMode ? Colors.white : Colors.black,
             ),
             decoration: BoxDecoration(
                 color: darkMode ? Colors.grey.shade800 : Colors.grey.shade300,
                 borderRadius: BorderRadius.all(Radius.circular(50)),
                 boxShadow: [
                   BoxShadow(
-                      color:darkMode ? Colors.grey.shade900 : Colors.grey.shade500,
+                      color: darkMode
+                          ? Colors.grey.shade900
+                          : Colors.grey.shade500,
                       offset: Offset(4.0, 4.0),
                       blurRadius: 15.0,
                       spreadRadius: 1.0),
                   BoxShadow(
-                      color:darkMode ? Colors.grey.shade800 : Colors.white,
+                      color: darkMode ? Colors.grey.shade800 : Colors.white,
                       offset: Offset(-4.0, -4.0),
                       blurRadius: 15.0,
                       spreadRadius: 1.0),
